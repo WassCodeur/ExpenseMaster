@@ -7,9 +7,9 @@ Simplifying expense management for seamless financial tracking and effortless co
 - Ayodeji Odemo 
 - Wachiou Bouraima
 
-Firstname,lastname,role
-Ayodeji,Odemo,Front-end Developer
-Wachiou,Bouraima,Back-end Developer
+Firstname| lastname| roles
+Ayodeji| Odemo| Front-end Developer
+Wachiou| Bouraima| Back-end Developer
 
 # Technologies
 
@@ -65,4 +65,4 @@ Simplifying expense management for seamless financial tracking and effortless co
 
 # Data Modelling
 
-![alt text]("photo_2023-06-21_08-32-25.jpg")
+![alt text](photo_2023-06-21_08-32-25.jpg)

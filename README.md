@@ -2,7 +2,6 @@
 
 Simplifying expense management for seamless financial tracking and effortless control.
 
-
 # Teams Members
 
 - Ayodeji Odemo 

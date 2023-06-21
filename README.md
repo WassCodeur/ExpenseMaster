@@ -65,6 +65,5 @@ Simplifying expense management for seamless financial tracking and effortless co
 - As a user, I should be able to view my expense category.
 
 # Data Modelling
-# UML Diagram
 
 ![alt text]("photo_2023-06-21_08-32-25.jpg")

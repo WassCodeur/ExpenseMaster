@@ -7,9 +7,10 @@ Simplifying expense management for seamless financial tracking and effortless co
 - Ayodeji Odemo 
 - Wachiou Bouraima
 
-Firstname| lastname| roles
-Ayodeji| Odemo| Front-end Developer
-Wachiou| Bouraima| Back-end Developer
+|Firstname| lastname| roles|
+-----------|--------------|----------------|
+|[Ayodeji](https://github.com/Vicodevee)| [Odemo](https://github.com/Vicodevee)| [Front-end Developer](https://github.com/Vicodevee)|
+|[Wachiou](https://github.com/WassCodeur)| [BOURAIMA](https://github.com/WassCodeur)| [Back-end Developer](https://wasscodeur.me)|
 
 # Technologies
 
@@ -66,3 +67,9 @@ Simplifying expense management for seamless financial tracking and effortless co
 # Data Modelling
 
 ![alt text](photo_2023-06-21_08-32-25.jpg)
+
+# Let's connect with us
+
+- [Ayodeji Odemo](https://www.linkedin.com/in/ayodeji-odemo-0b0b0a1b2/)
+- [Wachiou Bouraima](https://www.linkedin.com/in/wasscodeur/)
+

@@ -66,7 +66,7 @@ Simplifying expense management for seamless financial tracking and effortless co
 
 # Data Modelling
 
-![alt text](photo_2023-06-21_08-32-25.jpg)
+![alt text](static/images/photo_2023-06-21_08-32-25.jpg)
 
 # Let's connect with us
 

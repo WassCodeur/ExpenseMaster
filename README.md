@@ -70,6 +70,6 @@ Simplifying expense management for seamless financial tracking and effortless co
 
 # Let's connect with us
 
-- [Ayodeji Odemo](https://www.linkedin.com/in/ayodeji-odemo-0b0b0a1b2/)
+- [Ayodeji Odemo](https://www.linkedin.com/in/Vicodevee/)
 - [Wachiou Bouraima](https://www.linkedin.com/in/wasscodeur/)
 

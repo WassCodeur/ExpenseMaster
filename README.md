@@ -10,7 +10,7 @@ Simplifying expense management for seamless financial tracking and effortless co
 |Firstname| lastname| roles|
 -----------|--------------|----------------|
 |[Ayodeji](https://github.com/Vicodevee)| [Odemo](https://github.com/Vicodevee)| [Front-end Developer](https://github.com/Vicodevee)|
-|[Wachiou](https://github.com/WassCodeur)| [BOURAIMA](https://github.com/WassCodeur)| [Back-end Developer](https://wasscodeur.me)|
+|[Wachiou](https://wasscodeur.me)| [BOURAIMA](https://wasscodeur.me)| [Back-end Developer](https://github.com/WassCodeur)|
 
 # Technologies
 

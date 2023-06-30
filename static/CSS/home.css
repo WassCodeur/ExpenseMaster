@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper_banner,
+.feature_1,
+.feature_2,
+.feature_3 {
+    display: flex;
+}
+
+.feature_1,
+.feature_2,
+.feature_3 {
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.feature_description {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.wrapper_why_us {
+    margin-left: 20px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.getstart {
+    text-align: center;
+}

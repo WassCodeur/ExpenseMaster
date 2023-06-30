@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: larger;
+    font-weight: bolder;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.logo #expense {
+    color: red;
+}
+
+.logo #master {}
+
+.logo-menu,
+.nav-main ul {
+    display: flex;
+
+}
+
+.logo-menu {
+    justify-content: space-between;
+}
+
+.nav-main ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.nav-main ul li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-main {}
+
+.nav-main ul li a:hover {}
+
+.footer-part-main {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}

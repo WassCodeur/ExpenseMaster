@@ -1,33 +1,102 @@
 {% extends "/partials/layout.html" %}
 {% block head %}
 <title>Home</title>
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/home.css') }}">
 {% endblock %}
 {% block content %}
-
-<h2>Expense MASTER</h2>
-<div class="container">
-    <h4>Your balance</h4>
-    <h1 id="balance">$0.0</h1>
-    <div class="inc-exp-container">
-        <div>
-            <h4>income</h4>
-            <p id="money-plus" class="money plus">+$0.00</p>
+<div class="wrapper_banner">
+    <div class="getstart">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+        <div class="description">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nam quia quos similique numquam nulla
+                suscipit repudiandae commodi, quod soluta a illo explicabo blanditiis nobis fuga aperiam, harum quas
+                deleniti?</span>
         </div>
-        <div>
-            <h4>expense</h4>
-            <p id="money-minus" class="money minus">-$0.00</p>
+        <div class="btn">
+            <a href="/register">Get Started</a>
         </div>
     </div>
-    <h3>History</h3>
-    <h3>add new transation</h3>
-    <form action="" id="form">
-        <div class="form-control"> <label for="text">text</label> <input type="text" id="text"
-                placeholder="please enter the text..." /> </div>
-        <div class="form-control"> <label for="amount">amount <br />(negtive=expense,positive=income)</label> <input
-                type="number" id="amount" placeholder="please enter the amount..." /> </div> <button class="btn">Add
-            transation</button>
-    </form>
+    <div class="banner_img">
+        <img src="{{ url_for('static',     filename='images/banner.png') }}" alt="">
+    </div>
 </div>
-<script src="script.js"></script>
+<div class="wrapper_why_us">
+    <h1>Why to Expense Master</h1>
+    <div class="why_us_description_item_text">
+        <span>
+            use our app to manage your expenses and income
+        </span>
 
-{% endblock %}
+    </div>
+</div>
+<div class="wrapper_features">
+    <div class="features">
+        <div class="feature_1">
+            <div class="feature_1_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+            <div class="feature_description">
+                <span>
+                    g elit. Quisquam, voluptatuLorem ipsum dolor sit amet consectetur adipisicinm. Lorem ipsum dolor
+                    sit amet, consectetur adipisicing elit. Exercitationem, incidunt ut animi quaerat aspernatur
+                    fuga, voluptate harum blanditiis commodi minus laudantium. Maiores neque nobis corporis
+                    blanditiis soluta, eius impedit ratione.
+                </span>
+            </div>
+        </div>
+        <div class="feature_2">
+            <div class="feature_description">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Voluptatum, pariatur? Veritatis atque ad deleniti
+                    sit quaerat voluptatum, voluptatibus minus facere. Quasi repellendus eos voluptatum quisquam
+                    tempore quis, saepe et quia.
+                </span>
+            </div>
+            <div class="feature_2_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+        </div>
+        <div class="feature_3">
+            <div class="feature_3_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+            <div class="feature_description">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Ratione, eius alias at, temporibus aliquam nulla
+                    vel officia quas ipsa animi quam consequatur facere veniam fuga doloribus assumenda, sapiente
+                    est mollitia.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper_testimonies">
+    <div class="testimonies">
+        <div class="testimoner">
+            <div class="testimonies_img">
+                <img src="{{ url_for('static',     filename='images/exple.jpg') }}" alt="Testimony">
+            </div>
+            <div class="testimoner_name">User NAME</div>
+            <div class="testimoner_role">Software Enginer</div>
+        </div>
+        <div class="testimonies_description">
+            <div class="testimonies_description_item">
+                <div class="testimonies_description_item_text">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="call_to_action">
+        <div class="text">Track your spenses</div>
+        <div class="btn">
+            <a href="/register">Get Started</a>
+        </div>
+    </div>
+
+    {% endblock %}

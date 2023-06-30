@@ -7,7 +7,8 @@
     {% endblock %}
     <link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',     filename='css/layout.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,8 +23,8 @@
                 <ul>
                     <li><a href="{{ url_for('home') }}" class="header-nav-main">Home</a></li>
                     <li><a href="{{ url_for('about')}}">About Us</a></li>
-                    <li><a href="{{ url_for('login')}}">Login</a></li>
                     <li><a href="{{ url_for('blog')}}">blog</a></li>
+                    <li><a href="{{ url_for('login')}}">Login</a></li>
                     <li> <a href="{{ url_for('contact') }}" class="header-nav-main">Contact us</a></li>
                 </ul>
             </nav>
@@ -73,5 +74,6 @@
     </footer>
 
 </body>
+<script src="{{ url_for('static',     filename='js/main.js') }}"></script>
 
 </html>

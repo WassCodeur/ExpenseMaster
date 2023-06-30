@@ -1,13 +1,14 @@
 {% extends "/partials/layout.html" %}
 {% block head %}
-<title>Error 500</title>
+<title>Error 404</title>
 <link rel="stylesheet" href="{{ url_for('static',     filename='css/error404.css') }}">
 {% endblock %}
 {% block content %}
 <div class="error-container">
     <h1>404</h1>
-    <h2>Oups ! An internal server error has occurred.</h2>
-    <p>We're sorry, but an error has occurred while processing your request. Please try again later.</p>
+    <h2>Oups ! The page you are looking for cannot be found.</h2>
+    <p>The page you are trying to access does not exist or has been moved. Please check the URL or return to the home
+        page.</p>
     <a href="/" class="btn">Back to home page</a>
 </div>
 {% endblock %}

@@ -2,12 +2,31 @@
     box-sizing: border-box;
 }
 
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eff4fd;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 40px;
+    z-index: 999;
+
+}
+
 .logo {
     font-size: larger;
     font-weight: bolder;
     width: 100px;
     height: 100px;
-    margin: 10px;
+    margin: 25px;
 }
 
 .logo #expense {
@@ -46,4 +65,44 @@
     display: flex;
     justify-content: space-around;
     text-align: justify;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.footer-part-main {
+    padding: 5%;
+}
+
+.footer-part-main a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer-part-main a:hover {
+    color: red;
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.wrapper_social {
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+}
+
+i {
+    margin: 10px;
+    font-size: 30px;
+    color: hsl(0, 0%, 0%);
+}
+
+input[type=text] {
+    border: 1px solid;
 }

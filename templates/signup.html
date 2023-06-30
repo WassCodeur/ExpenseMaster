@@ -1,0 +1,18 @@
+{% extends "/partials/layout.html" %}
+{% block head %}
+<title>Signup</title>
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/signup.css') }}">
+{% endblock %}
+{% block content %}
+<div class="signup-container">
+    <h2>Signup</h2>
+    <form>
+        <input type="text" placeholder="username" required>
+        <input type="text" placeholder="fullname" required>
+        <input type="email" placeholder="e-mail" required>
+        <input type="password" placeholder="password" required>
+        <input type="password" placeholder="Confirme password" required>
+        <button type="submit">Signup</button>
+    </form>
+</div>
+{% endblock %}

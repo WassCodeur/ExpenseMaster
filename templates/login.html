@@ -1,11 +1,15 @@
 {% extends "/partials/layout.html" %}
 {% block head %}
 <title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/login.css') }}">
 {% endblock %}
 {% block content %}
-
-<h1> About Flask </h1>
-<p> Flask is a micro web framework written in Python.</p>
-<p> Applications that use the Flask framework include Pinterest,
-    LinkedIn, and the community web page for Flask itself.</p>
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <input type="email" placeholder="email" required>
+        <input type="password" placeholder="password" required>
+        <button type="submit">login</button>
+    </form>
+</div>
 {% endblock %}

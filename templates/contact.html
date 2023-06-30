@@ -1,0 +1,16 @@
+{% extends "/partials/layout.html" %}
+{% block head %}
+<title>Contact us</title>
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/contact.css') }}">
+{% endblock %}
+{% block content %}
+<div class="contact-container">
+    <h2>Contactez-nous</h2>
+    <form>
+        <input type="text" placeholder="fullname" required>
+        <input type="email" placeholder="e-mail" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+{% endblock %}

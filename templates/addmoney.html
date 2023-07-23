@@ -1,0 +1,70 @@
+{% extends "/partials/layoutuser.html" %}
+{% block head %}
+<style>
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    #expensecategory {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+    }
+</style>
+
+<title>Spense</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+
+    <h3>add new money</h3>
+    <form method="POST" action="/addmoney">
+        <label for="expense_amount">Amount:</label>
+        <input type="number" id="expense_amount" name="amount" required>
+        <label for="expense_note">Description:</label>
+        <input type="submit" value="Add">
+    </form>
+    <div>New balance: {{ balance }}</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "/partials/layoutuser.html" %}
+{% block head %}
+<title>Home</title>
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/home.css') }}">
+{% endblock %}
+{% block content %}
+<div class="wrapper_banner">
+    <div class="getstart">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+        <div class="description">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nam quia quos similique numquam nulla
+                suscipit repudiandae commodi, quod soluta a illo explicabo blanditiis nobis fuga aperiam, harum quas
+                deleniti?</span>
+        </div>
+        <div class="btn">
+            <a href="/add">Add New transaction</a>
+        </div>
+    </div>
+    <div class="banner_img">
+        <img src="{{ url_for('static',     filename='images/banner.png') }}" alt="">
+    </div>
+</div>
+<div class="wrapper_why_us">
+    <h1>Why to Expense Master</h1>
+    <div class="why_us_description_item_text">
+        <span>
+            use our app to manage your expenses and income
+        </span>
+
+    </div>
+</div>
+<div class="wrapper_features">
+    <div class="features">
+        <div class="feature_1">
+            <div class="feature_1_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+            <div class="feature_description">
+                <span>
+                    g elit. Quisquam, voluptatuLorem ipsum dolor sit amet consectetur adipisicinm. Lorem ipsum dolor
+                    sit amet, consectetur adipisicing elit. Exercitationem, incidunt ut animi quaerat aspernatur
+                    fuga, voluptate harum blanditiis commodi minus laudantium. Maiores neque nobis corporis
+                    blanditiis soluta, eius impedit ratione.
+                </span>
+            </div>
+        </div>
+        <div class="feature_2">
+            <div class="feature_description">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Voluptatum, pariatur? Veritatis atque ad deleniti
+                    sit quaerat voluptatum, voluptatibus minus facere. Quasi repellendus eos voluptatum quisquam
+                    tempore quis, saepe et quia.
+                </span>
+            </div>
+            <div class="feature_2_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+        </div>
+        <div class="feature_3">
+            <div class="feature_3_img">
+                <img src="{{ url_for('static',     filename='images/feature.png') }}" alt="">
+            </div>
+            <div class="feature_description">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Ratione, eius alias at, temporibus aliquam nulla
+                    vel officia quas ipsa animi quam consequatur facere veniam fuga doloribus assumenda, sapiente
+                    est mollitia.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimonials">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <img src="{{ url_for('static',     filename='images/exple.jpg') }}" alt="Testimony">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus est ac urna convallis, ut blandit
+                justo blandit. Proin commodo turpis metus, eu posuere odio hendrerit ut.</p>
+            <p class="author">John Doe</p>
+        </div>
+    </div>
+    <!-- <div class="wrapper_testimonies">
+    <div class="testimonies">
+        <div class="testimoner">
+
+            <div class="testimonies_img">
+                <img src="{{ url_for('static',     filename='images/exple.jpg') }}" alt="Testimony" width="100px">
+            </div>
+            <div class="testimoner_name">User NAME</div>
+            <div class="testimoner_role">Software Enginer</div>
+        </div>
+        <div class="testimonies_description">
+            <div class="testimonies_description_item">
+                <div class="testimonies_description_item_text">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+    <div class="call_to_action">
+        <div class="text">Track your spenses Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ducimus
+            quae
+            illum labore ab ut. Quibusdam deleniti, adipisci soluta expedita voluptatem tenetur tempore, quia harum
+            alias
+            voluptas eveniet excepturi corporis.</div>
+        <div class="btn">
+            <a href="/register">Get Started</a>
+        </div>
+    </div>
+
+    {% endblock %}

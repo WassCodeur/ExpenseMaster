@@ -1,3 +1,4 @@
 .env
 .env.backup
 .vscode
+__pycache__

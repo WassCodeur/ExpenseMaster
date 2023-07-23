@@ -18,16 +18,19 @@
 <body>
     <header>
         <div class="logo-menu">
-            <div class="logo"> <span id="expense">Expense</span><span id="master">Master</span></div>
+            <div class="logo"><a href="{{ url_for('homelogin') }}" class="logo-link"> <span
+                        id="expense">Expense</span><span id="master">Master</span></a></div>
             <nav class="nav-main">
                 <ul>
                     <li><a href="{{ url_for('home') }}" class="header-nav-main">Home</a></li>
                     <li><a href="{{ url_for('about')}}">About Us</a></li>
                     <li><a href="{{ url_for('blog')}}">blog</a></li>
-                    <li><a href="{{ url_for('login')}}">Login</a></li>
-                    <li> <a href="{{ url_for('contact') }}" class="header-nav-main">Contact us</a></li>
+                    <li > <a href="{{ url_for('contact') }}" class="header-nav-main">Contact us</a>
+                    </li>
+                    <li class="login"><a href="{{ url_for('login')}}">Login</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
@@ -39,7 +42,7 @@
     <footer class="footer-main">
         <div class="footer-part-main">
             <div class="footer-menu">
-                <div><a href="{{ url_for('home') }}" class="footer-link">Home</a></div>
+                <div><a href="{{ url_for('homelogin') }}" class="footer-link">Home</a></div>
                 <div><a href="{{ url_for('about') }}" class="footer-link">About</a></div>
                 <div><a href="{{ url_for('blog') }}">Blog</a></div>
                 <div><a href="{{ url_for('contact') }}" class="footer-link">Prendre Contact</a></div>
@@ -69,7 +72,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2021 ExpenseMaster. All rights reserved.</p>
+            <p>© {{ date }} ExpenseMaster. All rights reserved.</p>
         </div>
     </footer>
 

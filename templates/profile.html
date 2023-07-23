@@ -1,0 +1,14 @@
+{% extends "/partials/layoutuser.html" %}
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+{% block content %}
+
+<div class="profile_container container">
+    <h1>Profile</h1>
+    <p>Name: {{ user['name'] }}</p>
+    <p>Email: {{ user['email'] }}</p>
+</div>
+
+
+{% endblock %}

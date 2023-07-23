@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://codeshack.io/login-system-python-flask-mysql/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<title>Login System with Python Flask and MySQL</title>
+<meta property="og:url" content="https://codeshack.io/login-system-python-flask-mysql/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Login System with Python Flask and MySQL">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://codeshack.io/web/img/posts/login-system-python-flask-mysql.png">
+<meta property="og:description" content="Learn how to develop a complete login and registration system with Python Flask and MySQL. This comprehensive tutorial teaches you how to develop and design a login and registration interface utilizing best practices and databases.">
+<meta property="og:site_name" content="CodeShack">
+<meta name="description" content="Learn how to develop a complete login and registration system with Python Flask and MySQL. This comprehensive tutorial teaches you how to develop and design a login and registration interface utilizing best practices and databases.">
+<meta name="keywords" content="flask,login,mysql,programming,python,registration,tutorials">
+<meta name="author" content="David Adams">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Learn how to develop a complete login and registration system with Python Flask and MySQL. This comprehensive tutorial teaches you how to develop and design a login and registration interface utilizing best practices and databases.">
+<meta name="twitter:title" content="Login System with Python Flask and MySQL">
+<meta name="twitter:site" content="@codeshackio">
+<meta name="twitter:image" content="https://codeshack.io/web/img/posts/login-system-python-flask-mysql.png">
+<meta name="twitter:creator" content="@codeshackio">
+<meta name="apple-mobile-web-app-title" content="CodeShack">
+<meta name="application-name" content="CodeShack">
+<link rel="icon" href="https://codeshack.io/web/img/icon.png">
+<link rel="apple-touch-icon" href="https://codeshack.io/web/img/icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://codeshack.io/web/img/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://codeshack.io/web/img/icon-180x180.png">
+<link rel="apple-touch-icon" sizes="167x167" href="https://codeshack.io/web/img/icon-167x167.png">
+<link href="https://codeshack.io/web/img/icon-192x192.png" rel="icon" sizes="192x192">
+<link href="https://codeshack.io/web/img/icon-128x128.png" rel="icon" sizes="128x128">
+<link href="./Login System with Python Flask and MySQL_files/style.min.css" rel="stylesheet" type="text/css">
+<meta property="og:updated_time" content="2023-05-30T14:55:00+00:00">
+<meta property="article:published_time" content="2019-04-25T21:42:00+00:00">
+<meta property="article:modified_time" content="2023-05-30T14:55:00+00:00">
+<meta property="article:publisher" content="https://www.facebook.com/codeshackio/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://codeshack.io/login-system-python-flask-mysql/"
+            },
+            "headline": "Login System with Python Flask and MySQL",
+            "description": "Learn how to develop a complete login and registration system with Python Flask and MySQL. This comprehensive tutorial teaches you how to develop and design a login and registration interface utilizing best practices and databases.",
+            "image": "https://codeshack.io/web/img/posts/login-system-python-flask-mysql.png",  
+            "author": {
+                "@type": "Person",
+                "name": "David Adams",
+                "url": "https://codeshack.io/author/david-adams/"
+            },  
+            "publisher": {
+                "@type": "Organization",
+                "name": "CodeShack",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://codeshack.io/web/img/codeshack.png"
+                }
+            },
+            "datePublished": "2019-04-25",
+            "dateModified": "2023-05-30"
+        }
+        </script>
+<link rel="canonical" href="https://codeshack.io/login-system-python-flask-mysql/">
+<style>.main{padding-top:10px}</style>
+<script data-pagespeed-no-defer="">(function(){function f(a,b,d){if(a.addEventListener)a.addEventListener(b,d,!1);else if(a.attachEvent)a.attachEvent("on"+b,d);else{var c=a["on"+b];a["on"+b]=function(){d.call(this);c&&c.call(this)}}};window.pagespeed=window.pagespeed||{};var g=window.pagespeed;function k(a){this.g=[];this.f=0;this.h=!1;this.j=a;this.i=null;this.l=0;this.b=!1;this.a=0}function l(a,b){var d=b.getAttribute("data-pagespeed-lazy-position");if(d)return parseInt(d,0);var d=b.offsetTop,c=b.offsetParent;c&&(d+=l(a,c));d=Math.max(d,0);b.setAttribute("data-pagespeed-lazy-position",d);return d}
+function m(a,b){var d,c,e;if(!a.b&&(0==b.offsetHeight||0==b.offsetWidth))return!1;a:if(b.currentStyle)c=b.currentStyle.position;else{if(document.defaultView&&document.defaultView.getComputedStyle&&(c=document.defaultView.getComputedStyle(b,null))){c=c.getPropertyValue("position");break a}c=b.style&&b.style.position?b.style.position:""}if("relative"==c)return!0;e=0;"number"==typeof window.pageYOffset?e=window.pageYOffset:document.body&&document.body.scrollTop?e=document.body.scrollTop:document.documentElement&&
+document.documentElement.scrollTop&&(e=document.documentElement.scrollTop);d=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;c=e;e+=d;var h=b.getBoundingClientRect();h?(e=h.top-d,c=h.bottom):(h=l(a,b),d=h+b.offsetHeight,e=h-e,c=d-c);return e<=a.f&&0<=c+a.f}
+k.prototype.m=function(a){p(a);var b=this;window.setTimeout(function(){var d=a.getAttribute("data-pagespeed-lazy-src");if(d)if((b.h||m(b,a))&&-1!=a.src.indexOf(b.j)){var c=a.parentNode,e=a.nextSibling;c&&c.removeChild(a);a.c&&(a.getAttribute=a.c);a.removeAttribute("onload");a.tagName&&"IMG"==a.tagName&&g.CriticalImages&&f(a,"load",function(){g.CriticalImages.checkImageForCriticality(this);b.b&&(b.a--,b.a||g.CriticalImages.checkCriticalImages())});a.removeAttribute("data-pagespeed-lazy-src");a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+c&&c.insertBefore(a,e);if(c=a.getAttribute("data-pagespeed-lazy-srcset"))a.srcset=c,a.removeAttribute("data-pagespeed-lazy-srcset");a.src=d}else b.g.push(a)},0)};k.prototype.loadIfVisibleAndMaybeBeacon=k.prototype.m;k.prototype.s=function(){this.h=!0;q(this)};k.prototype.loadAllImages=k.prototype.s;function q(a){var b=a.g,d=b.length;a.g=[];for(var c=0;c<d;++c)a.m(b[c])}function t(a,b){return a.a?null!=a.a(b):null!=a.getAttribute(b)}
+k.prototype.u=function(){for(var a=document.getElementsByTagName("img"),b=0,d;d=a[b];b++)t(d,"data-pagespeed-lazy-src")&&p(d)};k.prototype.overrideAttributeFunctions=k.prototype.u;function p(a){t(a,"data-pagespeed-lazy-replaced-functions")||(a.c=a.getAttribute,a.getAttribute=function(a){"src"==a.toLowerCase()&&t(this,"data-pagespeed-lazy-src")&&(a="data-pagespeed-lazy-src");return this.c(a)},a.setAttribute("data-pagespeed-lazy-replaced-functions","1"))}
+g.o=function(a,b){function d(){if(!(c.b&&a||c.i)){var b=200;200<(new Date).getTime()-c.l&&(b=0);c.i=window.setTimeout(function(){c.l=(new Date).getTime();q(c);c.i=null},b)}}var c=new k(b);g.lazyLoadImages=c;f(window,"load",function(){c.b=!0;c.h=a;c.f=200;if(g.CriticalImages){for(var b=0,d=document.getElementsByTagName("img"),r=0,n;n=d[r];r++)-1!=n.src.indexOf(c.j)&&t(n,"data-pagespeed-lazy-src")&&b++;c.a=b;c.a||g.CriticalImages.checkCriticalImages()}q(c)});b.indexOf("data")&&((new Image).src=b);f(window,
+"scroll",d);f(window,"resize",d)};g.lazyLoadInit=g.o;})();
+
+pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
+</script><script src="https://codeshack.disqus.com/embed.js" data-timestamp="1688551793131"></script><script src="./Login System with Python Flask and MySQL_files/codesyntaxhighlight.js.download" defer="defer"></script><style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style></head>
+<body><span id="warning-container"><i data-reactroot=""></i></span><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://codeshack.io/login-system-python-flask-mysql/?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://codeshack.io/login-system-python-flask-mysql/?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<div class="topnav">
+<div class="topnavcontent">
+<header class="logo">
+<a href="https://codeshack.io/"><script data-pagespeed-no-defer="">(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','https://codeshack.io/login-system-python-flask-mysql/','ffv6rpMNIY',false,false,'fRjJ5YsKTXc');</script><img src="https://codeshack.io/web/img/logo.png" alt="CodeShack" width="135" height="32" data-pagespeed-url-hash="828361228" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+</header>
+<nav>
+<label for="drop" class="toggle mbars"><span class="bars"></span></label>
+<input type="checkbox" id="drop">
+<ul class="mhide">
+<li>
+<a href="https://codeshack.io/packages/">Packages</a>
+<div>
+<ul>
+<li><a href="https://codeshack.io/packages/php/">PHP</a></li>
+<li><a href="https://codeshack.io/php-scripts-bundle/">PHP Bundle</a></li>
+<li><a href="https://codeshack.io/packages/python/">Python</a></li>
+<li><a href="https://codeshack.io/packages/nodejs/">Node.js</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="https://codeshack.io/tutorials/">Tutorials</a>
+<div>
+<ul>
+<li><a href="https://codeshack.io/tag/html/">HTML</a></li>
+<li><a href="https://codeshack.io/tag/css/">CSS</a></li>
+<li><a href="https://codeshack.io/tag/javascript/">JavaScript</a></li>
+<li><a href="https://codeshack.io/tag/php/">PHP</a></li>
+<li><a href="https://codeshack.io/tag/python/">Python</a></li>
+<li><a href="https://codeshack.io/tag/mysql/">MySQL</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="https://codeshack.io/examples/">Examples</a>
+<div>
+<ul>
+<li><a href="https://codeshack.io/examples/html/">HTML</a></li>
+<li><a href="https://codeshack.io/examples/css/">CSS</a></li>
+<li><a href="https://codeshack.io/examples/javascript/">JavaScript</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="https://codeshack.io/references/">References</a>
+<div>
+<ul>
+<li><a href="https://codeshack.io/references/html/">HTML</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="https://codeshack.io/tools/">Tools</a>
+<div style="width:250px;">
+<ul>
+<li><a href="https://codeshack.io/code-editor/">Live Code Editor</a></li>
+<li><a href="https://codeshack.io/unix-timestamp-converter/">Unix Timestamp Converter</a></li>
+<li><a href="https://codeshack.io/lorem-ipsum-generator/">Lorem Ipsum Generator</a></li>
+<li><a href="https://codeshack.io/seo-title-meta-checker/">SEO Title &amp; Meta Checker</a></li>
+<li><a href="https://codeshack.io/image-base64-converter/">Image to Base64 Converter</a></li>
+<li><a href="https://codeshack.io/what-is-my-ip/">What Is My IP</a></li>
+<li><a href="https://codeshack.io/password-generator/">Password Generator</a></li>
+<li><a href="https://codeshack.io/rgb-to-hex-converter/">RGB to HEX Converter</a></li>
+<li><a href="https://codeshack.io/hex-to-rgb-converter/">HEX to RGB Converter</a></li>
+</ul>
+</div>
+</li>
+<li class="dhide">
+<a href="https://codeshack.io/">CodeShack.io</a>
+<div>
+<ul>
+<li><a href="https://codeshack.io/about/">About Us</a></li>
+<li><a href="https://codeshack.io/contact/">Contact Us</a></li>
+<li><a href="https://codeshack.io/privacy-policy/">Privacy Policy</a></li>
+<li><a href="https://codeshack.io/terms/">Terms</a></li>
+<li><a href="https://codeshack.io/receiptresend/">Resend a Receipt</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="topcontent3 m100"></div>
+<div class="example-header">
+<div class="m100">
+<a href="https://codeshack.io/tag/html/">HTML</a>
+<a href="https://codeshack.io/tag/css/">CSS</a>
+<a href="https://codeshack.io/tag/javascript/">JavaScript</a>
+<a href="https://codeshack.io/tag/php/">PHP</a>
+<a href="https://codeshack.io/tag/python/">Python</a>
+<a href="https://codeshack.io/tag/mysql/">MySQL</a>
+</div>
+</div>
+<div class="main">
+<main class="m100">
+<div class="post mrm mpad">
+<article>
+<header>
+<h1>Login System with Python Flask and MySQL</h1>
+<p>
+Updated on <b><time datetime="2023-05-30T14:55:00+00:00">May 30, 2023</time></b> by <a href="https://codeshack.io/author/david-adams/">David Adams</a>
+</p>
+</header>
+<div>
+<img class="featuredimage" src="https://codeshack.io/web/img/posts/login-system-python-flask-mysql.png" width="770" height="400" alt="Login System with Python Flask and MySQL" data-pagespeed-url-hash="3022750842" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="content m100 mpadtb">
+<p>In this tutorial, we'll be creating a complete login and registration system with <a href="http://flask.pocoo.org/" target="_blank" class="l1">Python Flask</a> and <a href="https://www.mysql.com/" target="_blank" class="l1">MySQL</a>.</p>
+<p>Python is currently taking the web development scene by storm, growing consistently every year. It has a low learning curve and therefore much easier to adapt to compared to other known languages (Node.js, PHP, etc.). In addition, Python is relatively new, so it would be advantageous to start learning immediately.</p>
+<p>The <a href="https://codeshack.io/login-system-python-flask-mysql/#packages" class="l1">Advanced package</a> includes additional features and a download link to the source code.</p>
+<div class="contents">
+<h2>Contents</h2>
+<ol>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#gettingstarted">Getting Started</a>
+<ol>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#whatyouwilllearn">What You Will Learn in this Tutorial</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#requirements">Requirements</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#filestructuresetup">File Structure &amp; Setup</a></li>
+</ol>
+</li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingthedatabaseandsettinguptables">Creating the Database and setting-up Tables</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingthestylesheet">Creating the Stylesheet (CSS3)</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingtheloginsystem">Creating the Login System</a>
+<ol>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingthelogintemplate">Creating the Login Template</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#authenticatinguserswithpython">Authenticating Users with Python</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingthelogoutscript">Creating the Logout Script</a></li>
+</ol>
+</li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingtheregistrationsystem">Creating the Registration System</a>
+<ol>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingtheregistrationtemplate">Creating the Registration Template</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#registeringuserswithpython">Registering Users with Python</a></li>
+</ol>
+</li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingthehomepage">Creating the Home Page</a></li>
+<li><a href="https://codeshack.io/login-system-python-flask-mysql/#creatingtheprofilepage">Creating the Profile Page</a></li>
+</ol>
+</div>
+<h2 id="gettingstarted">1. Getting Started</h2>
+<p>There are a few steps we need to take before we create our Python login and registration system. We need to download and set up Python and install the packages that our app will depend on.</p>
+<h3 id="whatyouwilllearn">1.1. What You Will Learn in this Tutorial</h3>
+<ul>
+<li><b>Form Design</b> — Design a login and registration form with HTML5 and CSS3.</li>
+<li><b>Templates</b> — Create Flask templates with HTML and Python.</li>
+<li><b>Basic Validation</b> — Validating form data that is sent to the server (username, password, and email).</li>
+<li><b>Session Management</b> — Initialize sessions and store retrieved database results.</li>
+<li><b>MySQL Queries</b> — Select and insert records from/in our database table.</li>
+<li><b>Routes</b> — Routing will enable us to associate the URLs with the functions that we will create.</li>
+</ul>
+<h3 id="requirements">1.2. Requirements</h3>
+<ul>
+<li>Download and install <a href="https://www.python.org/downloads/" target="_blank" class="l1">Python</a>, for this tutorial I'll be using Python 3.11.3. Make sure to check the <i>Add Python to PATH</i> option on the installation setup screen.</li>
+<li>Download and install <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" class="l1">MySQL Community Server</a> and <a href="https://www.mysql.com/products/workbench/" target="_blank" class="l1">MySQL Workbench</a>. You can skip this step if you already have a MySQL server installed.</li>
+<li>Open command line and Install <a href="http://flask.pocoo.org/" target="_blank" class="l1">Python Flask</a> with the command: <i class="hl">pip install flask</i></li>
+<li>Install <a href="https://flask-mysqldb.readthedocs.io/en/latest/" target="_blank" class="l1">Flask-MySQLdb</a> with the command: <i class="hl">pip install flask-mysqldb</i></li>
+</ul>
+<h3 id="filestructuresetup">1.3. File Structure &amp; Setup</h3>
+<p>We need to create our project directory and files. You can create the directory anywhere on your computer as long as Python can access it. Create the directories and files below.</p>
+<div class="contents fs">
+<h2>File Structure</h2>
+<p>
+\-- pythonlogin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- main.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\-- static<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- style.css<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\-- templates<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- index.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- register.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- home.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- profile.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- layout.html
+</p>
+</div>
+<p>Each file will contain the following:</p>
+<ul>
+<li><i>main.py</i> — This will be our main project file, which will contain all our Python code (Routes, MySQL connection, validation, etc.).</li>
+<li><i>index.html</i> — The login form template created with HTML5 and CSS3.</li>
+<li><i>register.html</i> — The registration form template created with HTML5 and CSS3.</li>
+<li><i>home.html</i> — The home template which is restricted to logged-in users.</li>
+<li><i>profile.html</i> — The profile template which is restricted to logged-in users. The user's details will be populated on this page.</li>
+<li><i>layout.html</i> — The layout template for the home and profile templates.</li>
+<li><i>style.css</i> — The CSS3 stylesheet for our login and registration system.</li>
+</ul>
+<p>The below instruction will start your web server (Windows):</p>
+<ul>
+<li>Make sure your <a href="https://dev.mysql.com/doc/mysql-startstop-excerpt/5.5/en/windows-server-first-start.html" target="_blank" class="l1">MySQL server is up and running</a>. It should have automatically started if you installed it via the installer. In addition, ensure MySQL is running on port 3306 otherwise you'll encounter connection errors.</li>
+<li>Open <i>Command Prompt</i> and navigate to your project directory. You can do this with the command <i class="hl">cd c:\your_project_folder_destination</i> on Windows.</li>
+<li>Run command: <i class="hl">set FLASK_APP=main.py</i></li>
+<li>Run command: <i class="hl">set FLASK_DEBUG=1</i></li>
+<li>Run command: <i class="hl">flask run</i></li>
+</ul>
+<p>Debug mode will enable us to edit our files without constantly restarting the web server.</p>
+<h2 id="creatingthedatabaseandsettinguptables">2. Creating the Database and setting-up Tables</h2>
+<p>MySQL Workbench is a GUI for managing our databases. Follow the below instructions on how to get started.</p>
+<ul>
+<li>Open <i>MySQL Workbench</i></li>
+<li>Enter your MySQL details</li>
+<li>Click <i>Test Connection</i>. If successful, you can click <i>OK</i></li>
+<li>Open your connection</li>
+<li>Execute the following SQL statement:</li>
+</ul>
+<div class="code-header">
+<span>SQL</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-sql"><code class=" language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">`</span>pythonlogin<span class="token punctuation">`</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARACTER SET</span> utf8 <span class="token keyword">COLLATE</span> utf8_general_ci<span class="token punctuation">;</span>
+<span class="token keyword">USE</span> <span class="token punctuation">`</span>pythonlogin<span class="token punctuation">`</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">`</span>accounts<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+	<span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+  	<span class="token punctuation">`</span>username<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  	<span class="token punctuation">`</span>password<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  	<span class="token punctuation">`</span>email<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token operator">=</span><span class="token number">2</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> <span class="token punctuation">`</span>accounts<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>username<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>password<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>email<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token string">'0ef15de6149819f2d10fc25b8c994b574245f193'</span><span class="token punctuation">,</span> <span class="token string">'test@test.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<img width="749" height="436" alt="MySQL Workbench Execute Login System SQL" style="margin-top:15px" data-pagespeed-url-hash="1286266991" src="https://codeshack.io/web/img/pythonlogin/mysql-workbench-login-system.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+<p>The above SQL statement will create our database <i>pythonlogin</i> with the table <i>accounts</i>, along with a test account that we can use for testing purposes.</p>
+<h2 id="creatingthestylesheet">3. Creating the Stylesheet (CSS3)</h2>
+<p>Edit the <i>style.css</i> file and add the following:</p>
+<div class="code-header">
+<span>CSS</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">* </span><span class="token punctuation">{</span>
+  	<span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  	<span class="token property">font-family</span><span class="token punctuation">:</span> -apple-system, BlinkMacSystemFont, <span class="token string">"segoe ui"</span>, roboto, oxygen, ubuntu, cantarell, <span class="token string">"fira sans"</span>, <span class="token string">"droid sans"</span>, <span class="token string">"helvetica neue"</span>, Arial, sans-serif<span class="token punctuation">;</span>
+  	<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  	<span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+  	<span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#435165</span><span class="token punctuation">;</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span>, <span class="token class">.register</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">400</span>px<span class="token punctuation">;</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#ffffff</span><span class="token punctuation">;</span>
+  	<span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">9</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">100</span>px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> h1, <span class="token class">.register</span> h1 </span><span class="token punctuation">{</span>
+  	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#5b6574</span><span class="token punctuation">;</span>
+  	<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">24</span>px<span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">20</span>px <span class="token number">0</span> <span class="token number">20</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#dee0e4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> <span class="token class">.links</span>, <span class="token class">.register</span> <span class="token class">.links</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> <span class="token class">.links</span> a, <span class="token class">.register</span> <span class="token class">.links</span> a </span><span class="token punctuation">{</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#adb2ba</span><span class="token punctuation">;</span>
+  	<span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">10</span>px <span class="token number">10</span>px <span class="token number">10</span>px<span class="token punctuation">;</span>
+  	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> <span class="token class">.links</span> a<span class="token pseudo-class">:hover</span>, <span class="token class">.register</span> <span class="token class">.links</span> a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#9da3ac</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> <span class="token class">.links</span> a<span class="token class">.active</span>, <span class="token class">.register</span> <span class="token class">.links</span> a<span class="token class">.active</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">3</span>px solid <span class="token hexcode">#3274d6</span><span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#3274d6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> form, <span class="token class">.register</span> form </span><span class="token punctuation">{</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  	<span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  	<span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> form label, <span class="token class">.register</span> form label </span><span class="token punctuation">{</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+  	<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#3274d6</span><span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#ffffff</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> form input<span class="token attribute">[type="password"]</span>, <span class="token class">.login</span> form input<span class="token attribute">[type="text"]</span>, <span class="token class">.login</span> form input<span class="token attribute">[type="email"]</span>, <span class="token class">.register</span> form input<span class="token attribute">[type="password"]</span>, <span class="token class">.register</span> form input<span class="token attribute">[type="text"]</span>, <span class="token class">.register</span> form input<span class="token attribute">[type="email"]</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">310</span>px<span class="token punctuation">;</span>
+  	<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+  	<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#dee0e4</span><span class="token punctuation">;</span>
+  	<span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> form input<span class="token attribute">[type="submit"]</span>, <span class="token class">.register</span> form input<span class="token attribute">[type="submit"]</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+  	<span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#3274d6</span><span class="token punctuation">;</span>
+  	<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#ffffff</span><span class="token punctuation">;</span>
+  	<span class="token property">transition</span><span class="token punctuation">:</span> background-color <span class="token number">0.2</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.login</span> form input<span class="token attribute">[type="submit"]</span><span class="token pseudo-class">:hover</span>, <span class="token class">.register</span> form input<span class="token attribute">[type="submit"]</span><span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#2868c7</span><span class="token punctuation">;</span>
+  	<span class="token property">transition</span><span class="token punctuation">:</span> background-color <span class="token number">0.2</span>s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#2f3947</span><span class="token punctuation">;</span>
+  	<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  	<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div </span><span class="token punctuation">{</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span>
+  	<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div h1, <span class="token class">.navtop</span> div a </span><span class="token punctuation">{</span>
+  	<span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
+  	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div h1 </span><span class="token punctuation">{</span>
+  	<span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  	<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">24</span>px<span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+ 	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#eaebed</span><span class="token punctuation">;</span>
+  	<span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div a </span><span class="token punctuation">{</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  	<span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#c1c4c8</span><span class="token punctuation">;</span>
+  	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div a i </span><span class="token punctuation">{</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">2</span>px <span class="token number">8</span>px <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navtop</span> div a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#eaebed</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body<span class="token class">.loggedin</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f4f7</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> </span><span class="token punctuation">{</span>
+  	<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> h2 </span><span class="token punctuation">{</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">22</span>px<span class="token punctuation">;</span>
+  	<span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#e0e0e3</span><span class="token punctuation">;</span>
+  	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#4a536e</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> &gt; p, <span class="token class">.content</span> &gt; div </span><span class="token punctuation">{</span>
+  	<span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">5</span>px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+  	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> &gt; p table td, <span class="token class">.content</span> &gt; div table td </span><span class="token punctuation">{</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> &gt; p table td<span class="token pseudo-class">:first-child</span>, <span class="token class">.content</span> &gt; div table td<span class="token pseudo-class">:first-child</span> </span><span class="token punctuation">{</span>
+	<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#4a536e</span><span class="token punctuation">;</span>
+	<span class="token property">padding-right</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.content</span> &gt; div p </span><span class="token punctuation">{</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">10</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The above stylesheet will structure our pages and provide an innovative experience for our users. Feel free to customize the stylesheet (change text color, font sizes, content width, etc.).</p>
+<h2 id="creatingtheloginsystem">4. Creating the Login System</h2>
+<p>We can finally start coding with Python! What we'll do in this section is create the login template, connect to our MySQL database, implement login authentication, and define session variables.</p>
+<p>The first thing we need to do is import the packages we're going to use, edit the <i>main.py</i> file, and add the following:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> render_template<span class="token punctuation">,</span> request<span class="token punctuation">,</span> redirect<span class="token punctuation">,</span> url_for<span class="token punctuation">,</span> session
+<span class="token keyword">from</span> flask_mysqldb <span class="token keyword">import</span> MySQL
+<span class="token keyword">import</span> MySQLdb<span class="token punctuation">.</span>cursors
+<span class="token keyword">import</span> MySQLdb<span class="token punctuation">.</span>cursors<span class="token punctuation">,</span> re<span class="token punctuation">,</span> hashlib</code></pre>
+<p>Now that we have imported all the packages we're going to utilize, we need to create the MySQL and app-related variables and configure the MySQL connection details.</p>
+<p>Add after:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python">app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+<span class="token comment"># Change this to your secret key (it can be anything, it's for extra protection)</span>
+app<span class="token punctuation">.</span>secret_key <span class="token operator">=</span> <span class="token string">'your secret key'</span>
+
+<span class="token comment"># Enter your database connection details below</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">'MYSQL_HOST'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'localhost'</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">'MYSQL_USER'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'root'</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">'MYSQL_PASSWORD'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">''</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">'MYSQL_DB'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'pythonlogin'</span>
+
+<span class="token comment"># Intialize MySQL</span>
+mysql <span class="token operator">=</span> MySQL<span class="token punctuation">(</span>app<span class="token punctuation">)</span></code></pre>
+<p>Ensure to configure the MySQL variables to reflect your MySQL details.</p>
+<p>Now, we can proceed to create the login page. To do that, we need to create a new route. Routes will enable us to associate our functions with a particular URL.</p>
+<p>Add after:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token comment"># http://localhost:5000/pythonlogin/ - the following will be our login page, which will use both GET and POST requests</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/'</span><span class="token punctuation">,</span> methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Output message if something goes wrong...</span>
+    msg <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">,</span> msg<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">)</span></code></pre>
+<br>
+<h3 id="creatingthelogintemplate">4.1 Creating the Login Template</h3>
+<p>Edit the <i>index.html</i> file and add:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>static<span class="token punctuation">'</span>, filename=<span class="token punctuation">'</span>style.css<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.7.1/css/all.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>links<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>login<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>login<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-user<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-lock<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Login<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>As you can see with the login template, we create the form along with the input fields: <i class="hl">username</i> and <i class="hl">password</i>. The form's method is set to <i class="hl">post</i> which determines the type of request we want to send to our server. We'll be using a POST request to send the form data.</p>
+<p>If we navigate to <i>http://localhost:5000/pythonlogin/</i> in our web browser, it will look like the following:</p>
+<div class="browser">
+<div>
+<span class="btn red"></span>
+<span class="btn orange"></span>
+<span class="btn green"></span>
+<span class="url">http://localhost:5000/pythonlogin/</span>
+</div>
+<img width="750" height="585" alt="Python MySQL Login Form" data-pagespeed-url-hash="2665138264" src="https://codeshack.io/web/img/pythonlogin/python-login-form.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<p>If you click the <i>Login</i> button, nothing will happen or will return an error. That's because we haven't implemented the code that handles the POST request.</p>
+<h3 id="authenticatinguserswithpython">4.2 Authenticating Users with Python</h3>
+<p>Now we need to go back to our <i>main.py</i> file and add the authentication code to our route method that we implemented.</p>
+<p>After:</p>
+<pre class=" language-python"><code class=" language-python"><span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Output a message if something goes wrong...</span>
+    msg <span class="token operator">=</span> <span class="token string">''</span></code></pre>
+<p>Add:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python">    <span class="token comment"># Check if "username" and "password" POST requests exist (user submitted form)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span> <span class="token keyword">and</span> <span class="token string">'username'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form <span class="token keyword">and</span> <span class="token string">'password'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form<span class="token punctuation">:</span>
+        <span class="token comment"># Create variables for easy access</span>
+        username <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span>
+        password <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'password'</span><span class="token punctuation">]</span>
+        <span class="token comment"># Retrieve the hashed password</span>
+        <span class="token builtin">hash</span> <span class="token operator">=</span> password <span class="token operator">+</span> app<span class="token punctuation">.</span>secret_key
+        <span class="token builtin">hash</span> <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>sha1<span class="token punctuation">(</span><span class="token builtin">hash</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        password <span class="token operator">=</span> <span class="token builtin">hash</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>With the code above, we use an <i>if</i> statement to check if the requested method is <i class="hl">POST</i> and check if the <i class="hl">username</i> and <i class="hl">password</i> variables exist in the form request. If they both exist, the username and password variables will be created, which will be associated with the form variables.</p>
+<p>In addition, we're leveraging the <a href="https://docs.python.org/3/library/hashlib.html" target="_blank" class="l1">hashlib module</a> to create a hashed password, which is good practice and will help prevent the original password from being exposed.</p>
+<p>Add after:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python">        <span class="token comment"># Check if account exists using MySQL</span>
+        cursor <span class="token operator">=</span> mysql<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span>MySQLdb<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">)</span>
+        cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'SELECT * FROM accounts WHERE username = %s AND password = %s'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># Fetch one record and return the result</span>
+        account <span class="token operator">=</span> cursor<span class="token punctuation">.</span>fetchone<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>The code above will execute a SQL query that will retrieve the account details from our <i>accounts</i> table in our MySQL database. The <i class="hl">username</i> and <i class="hl">password</i> variables are associated with this query, as that is what we will use to find the account.</p>
+<p>Add after:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python">        <span class="token comment"># If account exists in accounts table in out database</span>
+        <span class="token keyword">if</span> account<span class="token punctuation">:</span>
+            <span class="token comment"># Create session data, we can access this data in other routes</span>
+            session<span class="token punctuation">[</span><span class="token string">'loggedin'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+            session<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token operator">=</span> account<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
+            session<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span> <span class="token operator">=</span> account<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span>
+            <span class="token comment"># Redirect to home page</span>
+            <span class="token keyword">return</span> <span class="token string">'Logged in successfully!'</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># Account doesnt exist or username/password incorrect</span>
+            msg <span class="token operator">=</span> <span class="token string">'Incorrect username/password!'</span></code></pre>
+<p>The code above will determine if the account exists. If it does, the session variables are declared. These session variables will be remembered for the user as they will be used to determine whether the user is logged in or not.</p>
+<p>Session variables basically act like browser cookies. They are stored on the server as opposed to the user's browser.</p>
+<p>If the account doesn't exist, we can simply output the error on the login form.</p>
+<p>Your login route should look like the following:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/'</span><span class="token punctuation">,</span> methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Output a message if something goes wrong...</span>
+    msg <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token comment"># Check if "username" and "password" POST requests exist (user submitted form)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span> <span class="token keyword">and</span> <span class="token string">'username'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form <span class="token keyword">and</span> <span class="token string">'password'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form<span class="token punctuation">:</span>
+        <span class="token comment"># Create variables for easy access</span>
+        username <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span>
+        password <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'password'</span><span class="token punctuation">]</span>
+        <span class="token comment"># Check if account exists using MySQL</span>
+        cursor <span class="token operator">=</span> mysql<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span>MySQLdb<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">)</span>
+        cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'SELECT * FROM accounts WHERE username = %s AND password = %s'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># Fetch one record and return result</span>
+        account <span class="token operator">=</span> cursor<span class="token punctuation">.</span>fetchone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># If account exists in accounts table in out database</span>
+        <span class="token keyword">if</span> account<span class="token punctuation">:</span>
+            <span class="token comment"># Create session data, we can access this data in other routes</span>
+            session<span class="token punctuation">[</span><span class="token string">'loggedin'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+            session<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token operator">=</span> account<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
+            session<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span> <span class="token operator">=</span> account<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span>
+            <span class="token comment"># Redirect to home page</span>
+            <span class="token keyword">return</span> <span class="token string">'Logged in successfully!'</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># Account doesnt exist or username/password incorrect</span>
+            msg <span class="token operator">=</span> <span class="token string">'Incorrect username/password!'</span>
+    <span class="token comment"># Show the login form with message (if any)</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">,</span> msg<span class="token operator">=</span>msg<span class="token punctuation">)</span></code></pre>
+<p>To make sure everything is working correctly, navigate to <i>http://localhost:5000/pythonlogin/</i> and input "<i>test</i>" in both the username and password fields, and then click the <i>Login</i> button. You should receive a message that outputs "Logged in successfully!".</p>
+<h3 id="creatingthelogoutscript">4.3 Creating the Logout Script</h3>
+<p>For a user to logout, all we have to do is remove the session variables that were created when the user logged in.</p>
+<p>Add the following code to the <i>main.py</i> file:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token comment"># http://localhost:5000/python/logout - this will be the logout page</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/logout'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Remove session data, this will log the user out</span>
+   session<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'loggedin'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+   session<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+   session<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+   <span class="token comment"># Redirect to login page</span>
+   <span class="token keyword">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>The above code will remove each session variable associated with the user. Without these session variables, the user cannot be logged in. Subsequently, the user is redirected to the login page.</p>
+<p>We can logout by navigating to the following URL: <i>http://localhost:5000/pythonlogin/logout</i></p>
+<h2 id="creatingtheregistrationsystem">5. Creating the Registration System</h2>
+<p>We need a registration system that users can use to register on our app. What we'll do in this section is create a new register route and create the registration template, along with the registration form, which will consist of input fields, submit button, etc.</p>
+<h3 id="creatingtheregistrationtemplate">5.1 Creating the Registration Template</h3>
+<p>Edit the <i>register.html</i> file and add:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>static<span class="token punctuation">'</span>, filename=<span class="token punctuation">'</span>style.css<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.7.1/css/all.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>register<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>links<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>login<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>register<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>register<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-user<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-lock<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-envelope<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Email<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Register<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>The HTML template above we'll use to register users. It's identical to the login template but also includes the <i>Email</i> input field.</p>
+<p>The form's action attribute is associated with the "<i>register</i>" route, as we'll use this route to handle the POST request.</p>
+<h3 id="registeringuserswithpython">5.2 Registering Users with Python</h3>
+<p>Now that we have our template created, we can proceed to create the "<i>register</i>" route, which will handle the POST request and insert a new account into our <i>accounts</i> table, but only if the submitted fields are valid.</p>
+<p>Go back to the <i>main.py</i> file and add the following:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token comment"># http://localhost:5000/pythinlogin/register - this will be the registration page, we need to use both GET and POST requests</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/register'</span><span class="token punctuation">,</span> methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">register</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Output message if something goes wrong...</span>
+    msg <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token comment"># Check if "username", "password" and "email" POST requests exist (user submitted form)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span> <span class="token keyword">and</span> <span class="token string">'username'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form <span class="token keyword">and</span> <span class="token string">'password'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form <span class="token keyword">and</span> <span class="token string">'email'</span> <span class="token keyword">in</span> request<span class="token punctuation">.</span>form<span class="token punctuation">:</span>
+        <span class="token comment"># Create variables for easy access</span>
+        username <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span>
+        password <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'password'</span><span class="token punctuation">]</span>
+        email <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'email'</span><span class="token punctuation">]</span>
+    <span class="token keyword">elif</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        <span class="token comment"># Form is empty... (no POST data)</span>
+        msg <span class="token operator">=</span> <span class="token string">'Please fill out the form!'</span>
+    <span class="token comment"># Show registration form with message (if any)</span>
+    <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">'register.html'</span><span class="token punctuation">,</span> msg<span class="token operator">=</span>msg<span class="token punctuation">)</span></code></pre>
+<p>We create the "<i>register</i>" route and implement validation that will check if all the form fields exist. If they don't, then output a simple error.</p>
+<p>After:</p>
+<pre class=" language-python"><code class=" language-python">email <span class="token operator">=</span> request<span class="token punctuation">.</span>form<span class="token punctuation">[</span><span class="token string">'email'</span><span class="token punctuation">]</span></code></pre>
+<p>Add:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python">        <span class="token comment"># Check if account exists using MySQL</span>
+        cursor <span class="token operator">=</span> mysql<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span>MySQLdb<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">)</span>
+        cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'SELECT * FROM accounts WHERE username = %s'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>username<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        account <span class="token operator">=</span> cursor<span class="token punctuation">.</span>fetchone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># If account exists show error and validation checks</span>
+        <span class="token keyword">if</span> account<span class="token punctuation">:</span>
+            msg <span class="token operator">=</span> <span class="token string">'Account already exists!'</span>
+        <span class="token keyword">elif</span> <span class="token keyword">not</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">r'[^@]+@[^@]+\.[^@]+'</span><span class="token punctuation">,</span> email<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            msg <span class="token operator">=</span> <span class="token string">'Invalid email address!'</span>
+        <span class="token keyword">elif</span> <span class="token keyword">not</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">r'[A-Za-z0-9]+'</span><span class="token punctuation">,</span> username<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            msg <span class="token operator">=</span> <span class="token string">'Username must contain only characters and numbers!'</span>
+        <span class="token keyword">elif</span> <span class="token keyword">not</span> username <span class="token keyword">or</span> <span class="token keyword">not</span> password <span class="token keyword">or</span> <span class="token keyword">not</span> email<span class="token punctuation">:</span>
+            msg <span class="token operator">=</span> <span class="token string">'Please fill out the form!'</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># Hash the password</span>
+            <span class="token builtin">hash</span> <span class="token operator">=</span> password <span class="token operator">+</span> app<span class="token punctuation">.</span>secret_key
+            <span class="token builtin">hash</span> <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>sha1<span class="token punctuation">(</span><span class="token builtin">hash</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            password <span class="token operator">=</span> <span class="token builtin">hash</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># Account doesn't exist, and the form data is valid, so insert the new account into the accounts table</span>
+            cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'INSERT INTO accounts VALUES (NULL, %s, %s, %s)'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">,</span> email<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            mysql<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            msg <span class="token operator">=</span> <span class="token string">'You have successfully registered!'</span></code></pre>
+<p>The above code will select an account with the submitted <i>username</i> and <i>password</i> fields. If the account doesn't exist, we can proceed to validate the input data. Validation will check if the submitted <i>email</i> is valid and check if the <i>username</i> contains only letters and numbers.</p>
+<div class="tip">
+<i class="fas fa-lightbulb"></i>
+<p><strong>Coding Tip</strong> The %s placeholder in the query string will help prevent SQL injection, as their bound values will be escaped before insertion.</p>
+</div>
+<p>Subsequently, the code will insert a new account into our <i>accounts</i> tables.</p>
+<p>To test that it is working correctly, navigate to <i>http://localhost:5000/pythonlogin/register</i> and fill out the form and click the <i>Register</i> button. You should receive the following response:</p>
+<div class="browser">
+<div>
+<span class="btn red"></span>
+<span class="btn orange"></span>
+<span class="btn green"></span>
+<span class="url">http://localhost:5000/pythonlogin/register</span>
+</div>
+<img width="750" height="585" alt="Python Registration Form" data-pagespeed-url-hash="4056323494" src="https://codeshack.io/web/img/pythonlogin/python-registration-form.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<p>Now we can go back to our <i>index.html</i> file and change this line:</p>
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>To:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>register<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Users can now register and log in to our app. Next, we'll create a basic home page for logged-in users.</p>
+<h2 id="creatingthehomepage">6. Creating the Home Page</h2>
+<p>The home page will be restricted to logged-in users only. Non-registered users cannot access this page. You can adapt this page and create more pages.</p>
+<p>Edit the <i>main.py</i> file and add the following:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token comment"># http://localhost:5000/pythinlogin/home - this will be the home page, only accessible for logged in users</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/home'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Check if the user is logged in</span>
+    <span class="token keyword">if</span> <span class="token string">'loggedin'</span> <span class="token keyword">in</span> session<span class="token punctuation">:</span>
+        <span class="token comment"># User is loggedin show them the home page</span>
+        <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">'home.html'</span><span class="token punctuation">,</span> username<span class="token operator">=</span>session<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># User is not loggedin redirect to login page</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>The above code will create the home route function. If the user is logged in, they will have access to the home page. If not, they will be redirected to the login page.</p>
+<p>Edit the <i>home.html</i> file and add the following:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html">{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Home Page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Welcome back, {{ username }}!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+{% endblock %}</code></pre>
+<p>We also need to create the layout for our logged-in pages. Edit the <i>layout.html</i> file and add:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>{% block title %}{% endblock %}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>static<span class="token punctuation">'</span>, filename=<span class="token punctuation">'</span>style.css<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.7.1/css/all.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loggedin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navtop<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Website Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>home<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-home<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>profile<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-user-circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>Profile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ url_for(<span class="token punctuation">'</span>logout<span class="token punctuation">'</span>) }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-sign-out-alt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>Logout<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			{% block content %}{% endblock %}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Now, we can easily extend the same layout for both the home and profile pages.</p>
+<p>Currently, when a user logs in, there will be a basic output message. We can now change that to redirect the user to our new home page instead. Find the following code in the login route function:</p>
+<pre class=" language-python"><code class=" language-python"><span class="token keyword">return</span> <span class="token string">'Logged in successfully!'</span></code></pre>
+<p>Replace with:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token keyword">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>The user will now be redirected to the home page when they log in. If we enter the test details into the login form and click the <i>Login</i> button, we will see the following:</p>
+<div class="browser">
+<div>
+<span class="btn red"></span>
+<span class="btn orange"></span>
+<span class="btn green"></span>
+<span class="url">http://localhost:5000/pythonlogin/home</span>
+</div>
+<img width="750" height="585" alt="Python Login Home Page" data-pagespeed-url-hash="2547255503" src="https://codeshack.io/web/img/pythonlogin/python-login-home-page.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<p>It's just a simple home page that will output the username. You can implement your own code later.</p>
+<p>Next, we'll create the profile page and populate the user's details.</p>
+<h2 id="creatingtheprofilepage">7. Creating the Profile Page</h2>
+<p>The profile page will populate all details associated with the account (username, password, and email).</p>
+<p>Add the following route to the <i>main.py</i> file:</p>
+<div class="code-header">
+<span>Python</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-python"><code class=" language-python"><span class="token comment"># http://localhost:5000/pythinlogin/profile - this will be the profile page, only accessible for logged in users</span>
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/pythonlogin/profile'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">profile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Check if the user is logged in</span>
+    <span class="token keyword">if</span> <span class="token string">'loggedin'</span> <span class="token keyword">in</span> session<span class="token punctuation">:</span>
+        <span class="token comment"># We need all the account info for the user so we can display it on the profile page</span>
+        cursor <span class="token operator">=</span> mysql<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span>MySQLdb<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">)</span>
+        cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'SELECT * FROM accounts WHERE id = %s'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>session<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        account <span class="token operator">=</span> cursor<span class="token punctuation">.</span>fetchone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># Show the profile page with account info</span>
+        <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">'profile.html'</span><span class="token punctuation">,</span> account<span class="token operator">=</span>account<span class="token punctuation">)</span>
+    <span class="token comment"># User is not logged in redirect to login page</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>The above code will create the profile route and retrieve all the account details from the database, but only if the user is logged in.</p>
+<p>Edit the <i>profile.html</i> file and add:</p>
+<div class="code-header">
+<span>HTML</span>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#"><i class="fas fa-clipboard fa-sm"></i>Copy</a>
+</div>
+<pre class=" language-html"><code class=" language-html">{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Profile Page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Your account details are below:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Username:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{ account['username'] }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Password:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>******<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Email:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{ account['email'] }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+{% endblock %}</code></pre>
+<p>The above code will extend the layout (<i>layout.html</i>) file that we created previously. If you navigate to the profile page, it will look like the following:</p>
+<div class="browser">
+<div>
+<span class="btn red"></span>
+<span class="btn orange"></span>
+<span class="btn green"></span>
+<span class="url">http://localhost:5000/pythonlogin/profile</span>
+</div>
+<img width="750" height="585" alt="Python Login Profile Page" data-pagespeed-url-hash="3716832991" src="https://codeshack.io/web/img/pythonlogin/python-login-profile-page.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<p>That's basically it for the home and profile pages. The <a href="https://codeshack.io/login-system-python-flask-mysql/#packages" class="l1">Advanced package</a> includes the edit profile feature that will enable the user to change their username, password, and email.</p>
+<h2>Conclusion</h2>
+<p>Congratulations! You've successfully created your own login and registration system with Python Flask and MySQL. You're free to use the source code from this tutorial in your application(s).</p>
+<p>Please remember, the code should not be used for production purposes as there are a number of components that are essential for such purposes (WSGI server integration, etc.).</p>
+<p>If you enjoyed this tutorial, don't forget to hit the share button and drop a comment, as it will help us create more future content.</p>
+<p style="font-style:italic;padding-top:15px;" id="packages">If you would like to support us, consider purchasing a package below, as it will greatly help us create more quality tutorials and keep our server up and running.</p>
+<div class="price-table">
+<div class="mhide"></div>
+<div><h3>Basic</h3></div>
+<div><h3>Advanced</h3></div>
+<div>Source code</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Database SQL file</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Login &amp; Registration system</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Home page</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Profile page</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Activate account feature</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Edit profile page</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Remember me feature</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>AJAX integration</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Password encryption</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Forgot &amp; Reset Password</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>CSRF Protection</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Brute-force Protection</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>reCAPTCHA Protection</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Two-factor Authentication</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Activation Email Template</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Admin Panel<br>
+<span style="display:block;margin-top: 10px;">
+— View Dashboard<br>
+— Create, edit, and delete accounts<br>
+— Search, sort, and filter accounts<br>
+— Manage Email Templates<br>
+— Edit Settings
+</span>
+</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Responsive Design (mobile-friendly)</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>SCSS file</div>
+<div></div>
+<div><i class="fas fa-check"></i></div>
+<div>Commented code</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>Free updates &amp; support (bugs and minor issues)</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div>User Guide</div>
+<div><i class="fas fa-check"></i></div>
+<div><i class="fas fa-check"></i></div>
+<div style="font-size:14px;line-height:24px;">
+* Payments are processed with PayPal/Stripe.<br>
+* Advanced package also includes the tutorial source and basic package.
+</div>
+<div>
+</div>
+<div>
+<h3>$20.00</h3>
+<div class="buy-label">
+<div>PayPal</div>
+</div>
+<a href="https://codeshack.io/index.php?page=blog&amp;action=payment&amp;pid=71&amp;type=advanced" class="blue" rel="nofollow" style="margin-top:20px;" title="PayPal"><i class="fab fa-paypal"></i>Download</a>
+<div class="buy-label">
+<div>Stripe</div>
+</div>
+<a href="https://codeshack.io/login-system-python-flask-mysql/#" class="blue stripe-btn" rel="nofollow" title="Stripe" data-code="price_1KJNBwK5KcJwNwwGrT1MOdH1" style="margin-top:20px;"><i class="fas fa-credit-card"></i>Download</a>
+<div class="buy-label">
+<div>Cryptocurrency</div>
+</div>
+<a href="https://codeshack.io/buy-with-crypto/71/" class="blue" rel="nofollow" title="Cryptocurrency"><i class="fab fa-btc"></i>Download</a>
+</div>
+</div>
+<p>For more detailed information regarding the advanced package, click <a class="link1" href="https://codeshack.io/package/python/advanced-secure-login-registration-system/">here</a>.</p> </div>
+</div>
+<div class="share">
+<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://codeshack.io/login-system-python-flask-mysql/" aria-label="Share with Facebook" class="fb"><i class="fab fa-facebook-f"></i></a>
+<a target="_blank" href="https://twitter.com/share?text=Login%20System%20with%20Python%20Flask%20and%20MySQL&amp;url=https://codeshack.io/login-system-python-flask-mysql/" aria-label="Share with Twitter" class="tw"><i class="fab fa-twitter"></i></a>
+<a target="_blank" href="https://www.linkedin.com/cws/share?url=https://codeshack.io/login-system-python-flask-mysql/" aria-label="Share with LinkedIn" class="in"><i class="fab fa-linkedin-in"></i></a>
+<a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://codeshack.io/login-system-python-flask-mysql/&amp;media=https://codeshack.io/web/img/posts/login-system-python-flask-mysql.png" aria-label="Share with Pinterest" class="p"><i class="fab fa-pinterest-p"></i></a>
+</div>
+<footer>
+<div class="aboutauthor mjcenter mcenter">
+<h3>About Author</h3>
+<img width="150" height="150" alt="David Adams" data-pagespeed-url-hash="463862299" src="https://codeshack.io/web/img/avatar-200.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+<div class="m100 mpad">
+<h4>David Adams</h4>
+<p>Enthusiastic website developer, I've been designing and developing web applications for over 10 years, I enjoy the creativity I put into my projects and enjoy what others bring to the awesome web. My goal is to help newcomers learn the ways of the web.</p>
+</div>
+</div>
+<a class="article-tag" href="https://codeshack.io/tag/flask/">flask</a>
+<a class="article-tag" href="https://codeshack.io/tag/login/">login</a>
+<a class="article-tag" href="https://codeshack.io/tag/mysql/">mysql</a>
+<a class="article-tag" href="https://codeshack.io/tag/programming/">programming</a>
+<a class="article-tag" href="https://codeshack.io/tag/python/">python</a>
+<a class="article-tag" href="https://codeshack.io/tag/registration/">registration</a>
+<a class="article-tag" href="https://codeshack.io/tag/tutorials/">tutorials</a>
+<div class="prevnext">
+<a class="otherposts" href="https://codeshack.io/shopping-cart-system-php-mysql/">← Shopping Cart System with PHP and MySQL</a>
+<a class="otherposts" href="https://codeshack.io/crud-application-php-pdo-mysql/">CRUD Application with PHP, PDO, and MySQL →</a>
+</div>
+<div class="related-posts">
+<h3>Related Posts</h3>
+<div class="related-posts-wrapper">
+<a href="https://codeshack.io/live-support-chat-ajax-php-mysql/" target="_blank" class="m100">
+<img width="245" height="120" alt="Live Support Chat with AJAX, PHP and MySQL" data-pagespeed-url-hash="845197459" src="https://codeshack.io/web/img/posts/live-support-chat-ajax-php-mysql.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+<span>Live Support Chat with AJAX, PHP and MySQL</span>
+</a>
+<a href="https://codeshack.io/poll-voting-system-php-mysql/" target="_blank" class="m100">
+<img width="245" height="120" alt="Poll and Voting System with PHP and MySQL" data-pagespeed-url-hash="1139064404" src="https://codeshack.io/web/img/posts/poll-voting-system-php-mysql.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+<span>Poll and Voting System with PHP and MySQL</span>
+</a>
+<a href="https://codeshack.io/shopping-cart-system-php-mysql/" target="_blank" class="m100">
+<img width="245" height="120" alt="Shopping Cart System with PHP and MySQL" data-pagespeed-url-hash="3900336972" src="https://codeshack.io/web/img/posts/shopping-cart-system-php-mysql.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+<span>Shopping Cart System with PHP and MySQL</span>
+</a>
+</div>
+</div>
+<div id="comments">
+<div id="disqus_thread"></div>
+</div>
+</footer>
+</article>
+</div>
+</main>
+<aside class="m100 mpad">
+<div class="carbon">
+<script type="text/javascript" data-pagespeed-no-defer="">pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script async="" src="https://cdn.carbonads.com/carbon.js?serve=CE7DC2JY&amp;placement=codeshackio" id="_carbonads_js"></script>
+</div>
+<div class="search">
+<input id="search-txt" type="text" placeholder="Search blog ..." data-np-intersection-state="observed">
+<a id="search-btn" href="https://codeshack.io/login-system-python-flask-mysql/#" aria-label="Search Blog"><i class="fas fa-search"></i></a>
+</div>
+<div class="sideblock subwidget">
+<i class="far fa-envelope"></i>
+<div class="txt1">Become a Subscriber</div>
+<div class="txt2">Stay up to date and join our newsletter to receive the latest updates.</div>
+<input type="email" placeholder="Email Address" id="subemail" data-np-intersection-state="observed">
+<a href="https://codeshack.io/login-system-python-flask-mysql/#" id="subbtn">Subscribe</a>
+</div>
+<div class="sideblock">
+<h3>Follow Us</h3>
+<div>
+<div class="share">
+<a href="https://www.facebook.com/codeshackio/" aria-label="Facebook" class="fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com/codeshackio" aria-label="Twitter" class="tw" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://www.youtube.com/channel/UCm3QfVIxL-079Uj31Bk1nMg/" aria-label="YouTube" class="yt" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+<div class="sideblock">
+<h3>Recent Posts</h3>
+<div>
+<div class="sideposts">
+<div class="sideposttitle"><a href="https://codeshack.io/rss-news-feed-php-mysql/">RSS News Feed with PHP and MySQL</a></div>
+<div class="sideposttitle"><a href="https://codeshack.io/elegant-toast-notifications-javascript/">Elegant Toast Notifications with JavaScript</a></div>
+<div class="sideposttitle"><a href="https://codeshack.io/file-management-system-php/">File Management System with PHP</a></div>
+</div>
+</div>
+</div>
+<div class="sideblock">
+<h3>Tags</h3>
+<div>
+<a class="article-tag" href="https://codeshack.io/tag/tutorials/">tutorials</a>
+<a class="article-tag" href="https://codeshack.io/tag/php/">php</a>
+<a class="article-tag" href="https://codeshack.io/tag/programming/">programming</a>
+<a class="article-tag" href="https://codeshack.io/tag/mysql/">mysql</a>
+<a class="article-tag" href="https://codeshack.io/tag/javascript/">javascript</a>
+<a class="article-tag" href="https://codeshack.io/tag/freebies/">freebies</a>
+<a class="article-tag" href="https://codeshack.io/tag/ajax/">ajax</a>
+<a class="article-tag" href="https://codeshack.io/tag/css/">css</a>
+<a class="article-tag" href="https://codeshack.io/tag/snippets/">snippets</a>
+<a class="article-tag" href="https://codeshack.io/tag/form/">form</a>
+<a class="article-tag" href="https://codeshack.io/tag/php-class/">php class</a>
+<a class="article-tag" href="https://codeshack.io/tag/html/">html</a>
+<a class="article-tag" href="https://codeshack.io/tag/login/">login</a>
+<a class="article-tag" href="https://codeshack.io/tag/shopping-cart/">shopping cart</a>
+<a class="article-tag" href="https://codeshack.io/tag/mysqli/">mysqli</a>
+<a class="article-tag" href="https://codeshack.io/tag/registration/">registration</a>
+<a class="article-tag" href="https://codeshack.io/tag/scripting/">scripting</a>
+<a class="article-tag" href="https://codeshack.io/tag/pdo/">pdo</a>
+<a class="article-tag" href="https://codeshack.io/tag/javascript-class/">javascript class</a>
+<a class="article-tag" href="https://codeshack.io/tag/voting-system/">voting system</a>
+<a class="article-tag" href="https://codeshack.io/tag/crud/">crud</a>
+<a class="article-tag" href="https://codeshack.io/tag/flask/">flask</a>
+<a class="article-tag" href="https://codeshack.io/tag/ticketing-system/">ticketing system</a>
+<a class="article-tag" href="https://codeshack.io/tag/sort/">sort</a>
+<a class="article-tag" href="https://codeshack.io/tag/toast-notifications/">toast notifications</a>
+<a class="article-tag" href="https://codeshack.io/tag/cookie/">cookie</a>
+<a class="article-tag" href="https://codeshack.io/tag/progress-bar/">progress bar</a>
+<a class="article-tag" href="https://codeshack.io/tag/pagination/">pagination</a>
+<a class="article-tag" href="https://codeshack.io/tag/newsletter-system/">newsletter system</a>
+<a class="article-tag" href="https://codeshack.io/tag/content-locker/">content locker</a>
+<a class="article-tag" href="https://codeshack.io/tag/sessions/">sessions</a>
+<a class="article-tag" href="https://codeshack.io/tag/hotel-reservation-form/">hotel reservation form</a>
+<a class="article-tag" href="https://codeshack.io/tag/poll-system/">poll system</a>
+<a class="article-tag" href="https://codeshack.io/tag/template/">template</a>
+<a class="article-tag" href="https://codeshack.io/tag/event-calendar/">event calendar</a>
+<a class="article-tag" href="https://codeshack.io/tag/review-system/">review system</a>
+<a class="article-tag" href="https://codeshack.io/tag/columns/">columns</a>
+<a class="article-tag" href="https://codeshack.io/tag/database/">database</a>
+<a class="article-tag" href="https://codeshack.io/tag/progamming/">progamming</a>
+<a class="article-tag" href="https://codeshack.io/tag/snippet/">snippet</a>
+<a class="article-tag" href="https://codeshack.io/tag/file-upload/">file upload</a>
+<a class="article-tag" href="https://codeshack.io/tag/live-support-chat/">live support chat</a>
+<a class="article-tag" href="https://codeshack.io/tag/js/">js</a>
+<a class="article-tag" href="https://codeshack.io/tag/node.js/">node.js</a>
+<a class="article-tag" href="https://codeshack.io/tag/express/">express</a>
+<a class="article-tag" href="https://codeshack.io/tag/contact/">contact</a>
+<a class="article-tag" href="https://codeshack.io/tag/python/">python</a>
+<a class="article-tag" href="https://codeshack.io/tag/mvc/">mvc</a>
+<a class="article-tag" href="https://codeshack.io/tag/modals/">modals</a>
+<a class="article-tag" href="https://codeshack.io/tag/table/">table</a>
+<a class="article-tag" href="https://codeshack.io/tag/register/">register</a>
+<a class="article-tag" href="https://codeshack.io/tag/gallery-system/">gallery system</a>
+<a class="article-tag" href="https://codeshack.io/tag/mailing-list/">mailing list</a>
+<a class="article-tag" href="https://codeshack.io/tag/commenting-system/">commenting system</a>
+<a class="article-tag" href="https://codeshack.io/tag/survey-form/">survey form</a>
+<a class="article-tag" href="https://codeshack.io/tag/jquery/">jquery</a>
+</div>
+</div>
+</aside>
+</div>
+<footer class="footer m100">
+<div class="con1 m100">
+<div class="mhide footer-links">
+<h2 class="site-name"><img alt="CodeShack" width="32" height="32" data-pagespeed-url-hash="493084934" src="https://codeshack.io/web/img/icon.png" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">CodeShack.io</h2>
+<a href="https://codeshack.io/packages/">Packages</a>
+<a href="https://codeshack.io/tutorials/">Tutorials</a>
+<a href="https://codeshack.io/examples/">Examples</a>
+<a href="https://codeshack.io/references/">References</a>
+</div>
+<div class="mhide footer-links">
+<a href="https://codeshack.io/tools/">Tools</a>
+<a href="https://codeshack.io/code-editor/">Live Code Editor</a>
+<a href="https://codeshack.io/json-sorter/">JSON Sorter</a>
+<a href="https://codeshack.io/receiptresend/">Resend a Receipt</a>
+</div>
+<div class="mhide footer-links">
+<a href="https://codeshack.io/about/">About Us</a>
+<a href="https://codeshack.io/contact/">Contact Us</a>
+<a href="https://codeshack.io/privacy-policy/">Privacy Policy</a>
+<a href="https://codeshack.io/terms/">Terms</a>
+</div>
+<div class="m100 mcenter">
+<h2>Follow Us</h2>
+<div class="share share-alt">
+<a target="_blank" href="https://www.facebook.com/codeshackio/" aria-label="Facebook" class="fb"><i class="fab fa-facebook-f"></i></a>
+<a target="_blank" href="https://twitter.com/codeshackio" aria-label="Twitter" class="tw"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+</div>
+<div class="con2 mhide">
+<div>© 2023 CodeShack. All Rights Reserved. By using this website you accept the <a href="https://codeshack.io/terms/">terms and conditions</a>.</div>
+</div>
+</footer>
+<script type="text/javascript" data-pagespeed-no-defer="">pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C042H5T5VM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C042H5T5VM');</script>
+<script async="" src="https://kit.fontawesome.com/e0fce4bf75.js" crossorigin="anonymous"></script>
+<script>const DEFAULT_URL="https://codeshack.io/";const PAYMENT_TESTMODE=false;</script>
+<script src="./Login System with Python Flask and MySQL_files/script.min.js.download"></script><div class="cookie-consent">
+        <p>By using this website, you agree to our <a href="https://codeshack.io/privacy-policy/">privacy policy</a> and that we and our partners may set cookies for purposes such as customising content and advertising.</p>
+        <button id="accept">I understand</button>
+    </div>
+<script>var disqus_config=function(){this.page.url='https://codeshack.io/login-system-python-flask-mysql/';this.page.identifier=71;};(function(){var d=document,s=d.createElement('script');s.src='https://codeshack.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();(function(){if(!isMobile()){const d=document,s=d.createElement('script');s.src='https://codeshack.io/web/js/codesyntaxhighlight.js?v=1.2.0';s.setAttribute('defer','defer');(d.head||d.body).appendChild(s);}else{const css='pre,code{background-color:#F4F5F7;margin-top:6px;padding:5px;}';const e=document.createElement('style');e.setAttribute('type','text/css');if('textContent'in e){e.textContent=css;}else{e.styleSheet.cssText=css;}document.head.appendChild(e);}})();</script>
+
+<div id="wot-new-assistant-container"><div data-reactroot=""></div></div><script type="text/javascript" src="chrome-extension://fooolghllnmhmmndgjiamiiodkpenpbb/injectedPasswordless.js"></script></body></html>

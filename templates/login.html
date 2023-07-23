@@ -6,10 +6,12 @@
 {% block content %}
 <div class="login-container">
     <h2>Login</h2>
-    <form>
-        <input type="email" placeholder="email" required>
-        <input type="password" placeholder="password" required>
+    <form method="post" action="{{ url_for('login') }}">
+        <input type="email" placeholder="email" name="email">
+        <input type="password" placeholder="password" name="password" required>
+        <div class="msg">{{ msg }}</div>
         <button type="submit">login</button>
     </form>
+    don't have an account? <a href="{{ url_for('register') }}">register</a>
 </div>
 {% endblock %}

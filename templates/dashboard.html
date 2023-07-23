@@ -1,30 +1,57 @@
-{% extends "/partials/layout.html" %}
+{% extends "/partials/layoutuser.html" %}
 {% block head %}
 <title>Dashboard</title>
 {% endblock %}
 {% block content %}
-<div class="container">
+<div class="container container-dashboard">
     <h4>Your balance</h4>
-    <h1 id="balance">$0.0</h1>
+    <h1 id="balance">{{ device }} {{ balance }}0</h1>
     <div class="inc-exp-container">
         <div>
             <h4>income</h4>
-            <p id="money-plus" class="money plus">+$0.00</p>
+            <p id="money-plus" class="money plus">+{{ device }}{{ balance }}0</p>
         </div>
         <div>
             <h4>expense</h4>
-            <p id="money-minus" class="money minus">-$0.00</p>
+            <p id="money-minus" class="money minus">-{{ device }}{{ balance }}0</p>
         </div>
     </div>
     <h3>History</h3>
-    <h3>add new transation</h3>
-    <form action="" id="form">
-        <div class="form-control"> <label for="text">text</label> <input type="text" id="text"
-                placeholder="please enter the text..." /> </div>
-        <div class="form-control"> <label for="amount">amount <br />(negtive=expense,positive=income)</label> <input
-                type="number" id="amount" placeholder="please enter the amount..." /> </div> <button class="btn">Add
-            transation</button>
-    </form>
+    <!-- Expenses history -->
+    <div class="expenses-table">
+        <h2>List of Spendes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Categories</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <!-- <th>Actions</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            {% for expense in expenses %}
+            <tr>
+                <td> {{ expense['date'] }} </td>
+                <td> {{ expense['category_name'] }} </td>
+                <td> {{ expense['description'] }} </td>
+                <td> {{ device }} {{ expense['amount'] }} </td>
+                <!-- <td>
+                   
+                    <a href="/expenses/{{ expense['id'] }}" class="btn btn-primary">Show</a>
+                    <a href="/expenses/{{ expense['id'] }}/edit" class="btn btn-warning">Edit</a>
+                    <form action="/expenses/{{ expense['id'] }}" method="POST" style="display: inline-block;">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger">Delete</button>    
+                    </form>
+                </td> -->
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      
 </div>
 <script src="script.js"></script>
 

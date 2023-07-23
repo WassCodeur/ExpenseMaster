@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% block head %}
+    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/layout.css') }}">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+    <header class="header-main">
+        <div class="logo-menu">
+            <div class="logo"><a href="{{ url_for('homelogin') }}" class="logo-link"> <span
+                        id="expense">Expense</span><span id="master">Master</span></a></div>
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="{{ url_for('homelogin') }}" class="header-nav-main">Home</a></li>
+                    <li><a href="{{ url_for('about')}}">About Us</a></li>
+                    <li><a href="{{ url_for('blog')}}">blog</a></li>
+                    <li> <a href="{{ url_for('contact') }}" class="header-nav-main">Contact us</a></li>
+                    <li> <a href="{{ url_for('dashboard') }}" class="header-nav-main">Dashboard</a></li>
+                    <li> <a href="{{ url_for('profile') }}" class="header-nav-main">Profile</a></li>
+                    <li> <a href="{{ url_for('logout') }}" class="header-nav-main logout" >Logout</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer-main">
+        <div class="footer-part-main">
+            <div class="footer-menu">
+                <div><a href="{{ url_for('home') }}" class="footer-link">Home</a></div>
+                <div><a href="{{ url_for('about') }}" class="footer-link">About</a></div>
+                <div><a href="{{ url_for('blog') }}">Blog</a></div>
+                <div><a href="{{ url_for('contact') }}" class="footer-link">Prendre Contact</a></div>
+            </div>
+            <div class="footer-confidentiality" class="footer-link">
+                <div><a href="#" class="footer-link">Terms & Conditions</a></div>
+                <div><a href="#">Privacy</a></div>
+                <div><a href="#" class="footer-link">Support</a></div>
+            </div>
+
+
+
+            <div class="wrapper_social">
+                <div class="texte_social">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Nisi cum nihil
+                    quaerat
+                    ipsa asperiores impedit accusamus repudia</div>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/wasscodeur/?locale=en_US" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/wasscodeur/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://medium.com/@WassCodeur" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="https://twitter.com/WassCodeur" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/WassCodeur" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://studentambassadors.microsoft.com/en-US/studentambassadors/profile/fb1630eb-3122-4e5c-b53e-ea6bae8b04ac"
+                        target="_blank"><i class="fab fa-microsoft"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© {{ date }} ExpenseMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="{{ url_for('static',     filename='js/main.js') }}"></script>
+
+</html>

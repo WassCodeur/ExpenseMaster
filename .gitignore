@@ -1,4 +1,7 @@
 .env
 .env.backup
 .vscode
+views.py
+test.py
+main.py
 __pycache__

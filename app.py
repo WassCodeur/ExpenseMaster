@@ -146,7 +146,7 @@ def register():
             hash = hashlib.sha1(hash.encode())
             password = hash.hexdigest()
             # Account doesn't exist, and the form data is valid, so insert the new account into the accounts table
-            cursor.execute('INSERT INTO Users  (name, username, password, email, device) VALUES (%s, %s, %s, %s, %s)',
+            cursor.execute('INSERT INTO Users  (name, username, password, email, currency) VALUES (%s, %s, %s, %s, %s)',
                            (fullname, username, password, email, device,))
             mysql.connection.commit()
             msg = 'You have successfully registered!'
@@ -174,7 +174,7 @@ def dashboard():
         cursor.execute("SELECT * FROM Users WHERE id = %s", (session['id'],))
         user = cursor.fetchone()
         balance = user['balance']
-        device = user['device']
+        device = user['currency']
         if device is None:
             device = "$"
         

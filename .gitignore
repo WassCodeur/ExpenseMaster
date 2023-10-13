@@ -4,4 +4,5 @@
 views.py
 test.py
 main.py
+.venv
 __pycache__

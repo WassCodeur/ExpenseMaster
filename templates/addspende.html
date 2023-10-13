@@ -65,7 +65,7 @@
       <select name="expensecategory" id="expensecategory">
         <option value="">Select category</option>
         {% for category in categories %}
-        <option value="{{ category['id']}}">{{ category['category_name'] }}</option>
+        <option value="{{ category['id']}}">{{ category['name'] }}</option>
         {% endfor %}
       </select>
     </label>

@@ -23,20 +23,6 @@ CREATE TABLE Users (
     UNIQUE KEY `email` (`email`)
 );
 
--- Table structure for table `Expenses`
-DROP TABLE IF EXISTS `Expenses`;
-CREATE TABLE Expenses (
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(11) NOT NULL,
-    category_id INT(11) NOT NULL,
-    amount DECIMAL(10,2) NOT NULL,
-    description VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (category_id) REFERENCES Categories(id),
-    FOREIGN KEY (user_id) REFERENCES Users(id)
-);
-
 -- Table structure for table `Categories`
 DROP TABLE IF EXISTS `Categories`;
 CREATE TABLE Categories (
@@ -45,3 +31,20 @@ CREATE TABLE Categories (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+-- Table structure for table `Expenses`
+DROP TABLE IF EXISTS `Expenses`;
+CREATE TABLE Expenses (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) NOT NULL,
+    category_id INT(11) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    date TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES Categories(id),
+    FOREIGN KEY (user_id) REFERENCES Users(id)
+);
+
+INSERT INTO Categories SET (name) VALUE ('FOOD');
